@@ -1,9 +1,4 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
 body{
 	padding:0;
 	margin:0;
@@ -178,9 +173,7 @@ i.sites {
 	width:23%;
 	float:left;
 }
-.about_user ul.sites {
-	width:18%;
-	float:left;
+.about_user ul.sites {;
 }
 .about_user ul li {
 	display:inline-block;
@@ -650,6 +643,15 @@ label.span4 {
 		padding: 1em 0;
 		margin: 2.5em 0;
 	}
+	.about_user ul.place {
+		width: 30%;
+	}
+	.about_user ul.message {
+		width: 40%;
+	}
+	.about_user ul.call {
+		width: 30%;
+	}
 }
 @media screen and (max-width: 800px) {
 	.footer {
@@ -697,6 +699,15 @@ label.span4 {
 	.date p {
 		font-size: 1.35em;
 		margin: 0.4em 0;
+	}
+	.about_user ul.place {
+		width: 30%;
+	}
+	.about_user ul.message {
+		width: 40%;
+	}
+	.about_user ul.call {
+		width: 30%;
 	}
 	label.span1 {
 		top: 118px;
@@ -765,10 +776,10 @@ label.span4 {
 		width: 24%;
 	}
 	.about_user ul.status {
-		width: 17%;
+		;
 	}
 	.about_user ul.message {
-		width: 33%;
+		width: 50%;
 	}
 	.about_user ul.call {
 		width: 26%;
@@ -920,17 +931,21 @@ label.span4 {
 	i.dribble:hover {
 		background-position: -120px -30px;
 	}
+	.about_user {
+		font-size: 12px;
+	}
 	.about_user ul.status {
 		display: none;
 	}
 	.about_user ul.place {
-		width: 30%;
+		width: 22%; float: left;
 	}
 	.about_user ul.message {
-		width: 40%;
+		width: 45%; float: center;
 	}
 	.about_user ul.call {
-		width: 30%;
+		width: 33%;
+		float: right;
 	}
 	.about_user {
 		padding: 0.6em 0;
@@ -948,18 +963,17 @@ label.span4 {
 		margin-top: 1em;
 	}
 	.about_user ul.call {
-		display: none;
+		width:20%;
 	}
 	.about_user ul.place {
 		width: 33%;
+		text-align: left;
 	}
 	.about_user ul.message {
 		width: 45%;
+		text-align: center;
 	}
-	.about_user ul.status {
-		display: block;
-		width: 22%;
-	}
+	
 	.about_user ul li {
 		font-size: 1em;
 	}
@@ -1081,8 +1095,27 @@ label.span4 {
 	.bottom-grid-left,.bottom-grid-right {
 		padding: 0;
 	}
+	.about_user ul.place {
+		width: 20%; float: left;
+	}
+	.about_user ul.message {
+		width: 45%; float: center;
+	}
+	.about_user ul.call {
+		width: 33%;
+		float: right;
+	}
 }
 @media screen and (max-width: 320px) {
+	.about_user ul.message {
+	 float: center;
+	}
+	.about_user ul.place {
+		float: center;
+	}
+	.about_user ul.call {
+		float: center;
+	}
 	.top-strip {
 		padding: 0.5em;
 	}
@@ -1233,5 +1266,6 @@ label.span4 {
 		padding: 0.2em 0;
 		margin: 1.2em 0;
 	}
+	
 }
 
