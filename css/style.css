@@ -1,4 +1,4 @@
-@media only screen and (orientation : portrait){
+@media only screen and (orientation : portrait) and (max-width: 500px){
 	.about_user ul.place {
 		width: 22%; float: left;
 	}
@@ -9,7 +9,8 @@
 		width: 33%;
 		float: right;
 	}
-	.about_user{font-size: 10px;}
+	.about_user{font-size: 10px;
+	text-align: center;}
 }
 body{
 	padding:0;
@@ -168,10 +169,6 @@ i.sites {
 }
 .about_user ul.place {
 	width:19%;
-	float:left;
-}
-.about_user ul.status {
-	width:14%;
 	float:left;
 }
 .about_user ul.message {
@@ -530,7 +527,6 @@ label.span4 {
 	.social-icons i {
 		width: 35px;
 		height: 35px;
-		background: url('../images/img-sprite.png') no-repeat 0px 0px;
 		background-size: 300px;
 	}
 	i.facebook:hover {
@@ -548,6 +544,22 @@ label.span4 {
 	i.linkedin:hover {
 		background-position: -70px -35px;
 	}
+	i.youtube{
+		width:45px;
+		height:45px;
+		background: url('../images/combine_images.jpg') no-repeat 0px 0px;
+		display:inline-block;
+		margin-right: 8px;
+		background-position: 0px 0px
+	}
+	i.youtube:hover{
+		background-position: 0px -50px;
+	    transition:0.5s all;
+		-webkit-transition:0.5s all;
+		-moz-transition:0.5s all;
+		-o-transition:0.5s all;
+		-ms-transition:0.5s all;
+		}
 	i.skype {
 		background-position: -105px 0px;
 	}
@@ -842,6 +854,22 @@ label.span4 {
 		font-size: 1.5em;
 		padding: 0.9em 0;
 	}
+	.about_user i.youtube{
+	width:45px;
+	height:45px;
+	background: url('../images/combine_images.jpg') no-repeat 0px 0px;
+	display:inline-block;
+	margin-right: 8px;
+	background-position: 0px 0px
+	}
+	.about_user i.youtube:hover{
+	background-position: 0px -50px;
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+	}
 	.top-left-grid label.color1{
 		width: 85%;
 		height: 2px;
@@ -994,14 +1022,15 @@ label.span4 {
 		margin-top: 1em;
 	}
 	.about_user ul.call {
-		width:20%;
+		width:23%;
+		text-align: center;
 	}
 	.about_user ul.place {
 		width: 33%;
-		text-align: left;
+		text-align: center;
 	}
 	.about_user ul.message {
-		width: 45%;
+		width: 40%;
 		text-align: center;
 	}
 	
