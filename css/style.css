@@ -1,4 +1,16 @@
-
+@media only screen and (orientation : portrait){
+	.about_user ul.place {
+		width: 22%; float: left;
+	}
+	.about_user ul.message {
+		width: 45%; float: center;
+	}
+	.about_user ul.call {
+		width: 33%;
+		float: right;
+	}
+	.about_user{font-size: 10px;}
+}
 body{
 	padding:0;
 	margin:0;
