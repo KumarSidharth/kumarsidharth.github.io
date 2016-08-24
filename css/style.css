@@ -1,6 +1,6 @@
 @media only screen and (orientation : portrait){
 	.about_user ul.place {
-		width: 20%; float: left;
+		width: 22%; float: left;
 	}
 	.about_user ul.message {
 		width: 45%; float: center;
@@ -9,7 +9,7 @@
 		width: 33%;
 		float: right;
 	}
-	.about_user{font-size: 8px;}
+	.about_user{font-size: 10px;}
 }
 body{
 	padding:0;
@@ -129,29 +129,10 @@ i.skype:hover {
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
-i.dribble {
-	background-position: -180px 0px;
-}
-i.dribble:hover {
-	background-position: -180px -45px;
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
 i.location {
 	width: 30px;
 	height: 30px;
 	background: url('../images/img-sprite.png') no-repeat -225px 0px;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 5px;	
-}
-i.love {
-	width: 30px;
-	height: 30px;
-	background: url('../images/img-sprite.png') no-repeat -255px 0px;
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 5px;	
@@ -946,7 +927,6 @@ label.span4 {
 	.social-icons i {
 		width: 30px;
 		height: 30px;
-		background: url('../images/img-sprite.png') no-repeat 0px 0px;
 		background-size: 260px;
 	}
 	.text p {
