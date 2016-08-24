@@ -1,6 +1,6 @@
 @media only screen and (orientation : portrait){
 	.about_user ul.place {
-		width: 22%; float: left;
+		width: 20%; float: left;
 	}
 	.about_user ul.message {
 		width: 45%; float: center;
