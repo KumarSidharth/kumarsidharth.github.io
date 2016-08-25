@@ -1102,6 +1102,14 @@ label.span4 {
 	.top-right-grid label.color10 {
 		width: 90%;
 	}
+	label.span1 {
+		top: 150px;
+		left: 28px;
+	}
+	label.span2 {
+		top: 150px;
+		left: 28px;
+	}
 	.top-right-grid {
 		margin-top: 3em;
 	}
