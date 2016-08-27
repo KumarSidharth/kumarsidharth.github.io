@@ -944,6 +944,7 @@ label.span4 {
 	.about_user i.youtube{
 	background: url('../images/combine_images.jpg') no-repeat -5px -5px;
 	margin-right: 8px;
+	background-size: 50px;
 	}
 	.about_user i.youtube:hover{
 	background-position: 0px -50px;
