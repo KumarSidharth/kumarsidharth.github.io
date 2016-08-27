@@ -854,22 +854,6 @@ label.span4 {
 		font-size: 1.5em;
 		padding: 0.9em 0;
 	}
-	.about_user i.youtube{
-	width:45px;
-	height:45px;
-	background: url('../images/combine_images.jpg') no-repeat 0px 0px;
-	display:inline-block;
-	margin-right: 8px;
-	background-position: 0px 0px
-	}
-	.about_user i.youtube:hover{
-	background-position: 0px -50px;
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-	}
 	.top-left-grid label.color1{
 		width: 85%;
 		height: 2px;
@@ -956,6 +940,18 @@ label.span4 {
 		width: 30px;
 		height: 30px;
 		background-size: 260px;
+	}
+	.about_user i.youtube{
+	background: url('../images/combine_images.jpg') no-repeat -5px -5px;
+	margin-right: 8px;
+	}
+	.about_user i.youtube:hover{
+	background-position: 0px -50px;
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
 	}
 	.text p {
 		font-size: 1.35em;
