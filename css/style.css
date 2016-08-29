@@ -120,6 +120,23 @@ i.youtube:hover{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 } 
+i.quora{
+	width:45px;
+	height:45px;
+	background: url('../images/combine_quora.jpg') no-repeat 0px 0px;
+	display:inline-block;
+	margin-right: 8px;
+	background-size: 45px;
+}
+
+i.quora:hover{
+	background-position: -00px -42px;
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}  
 i.skype {
 	background-position: -135px 0px;
 }
