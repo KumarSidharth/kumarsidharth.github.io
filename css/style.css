@@ -969,6 +969,17 @@ label.span4 {
 	i.youtube:hover{
 	background-position: -5px -45px;
 	} 
+	i.quora{
+		width:30px;
+		height:30px;
+		background: url('../images/combine_quora.jpg') no-repeat 0px 0px;
+		background-size: 30px;
+	}
+
+	i.quora:hover{
+		background-position: -00px -28px;
+	    
+	}
 	.text p {
 		font-size: 1.35em;
 	}
