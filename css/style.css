@@ -1046,15 +1046,15 @@ label.span4 {
 	}
 	.about_user ul.call {
 		width:23%;
-		text-align: left;
+		text-align: center;
 	}
 	.about_user ul.place {
 		width: 33%;
-		text-align: left;
+		text-align: center;
 	}
 	.about_user ul.message {
 		width: 40%;
-		text-align: left;
+		text-align: center;
 	}
 	
 	.about_user ul li {
