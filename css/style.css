@@ -12,50 +12,12 @@
 	.about_user{font-size: 10px;
 	text-align: center;}
 }
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: 150%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.tooltiptext::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent black transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
 body{
 	text-decoration:none
 	padding:0;
 	margin:0;
 	font-family: 'Open Sans', sans-serif;
 	background:#fff;
-}
-a:hover{
-	color: #D2691E;
 }
 body a{
     transition:0.5s all;
@@ -64,6 +26,7 @@ body a{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
+
 input[type="button"],input[type="submit"]{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
