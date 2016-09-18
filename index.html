@@ -12,12 +12,31 @@ Author Contact: kumar.sidharth@outlook.com
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom CSS file -->
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Kumar Sidharth, Resume, Résumé, Sidharth, 
 Siddharth, Programmer, CV, Kumar Sidharth Resume, Kumar Sidharth CV, KumarSidharth, Kumarsidharth cv,kumarsidharth resume, web resume, web CV" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--webfont Because sometimes web safe fonts may not be web safe (Mobile browsers)-->
+<style type="text/css">
+a:hover{
+	color: 	#8B0000;
+	}</style>
+<script type="application/x-javascript"> 
+	addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+	$(document).ready(function(){
+    	$('[data-toggle="tooltip"]').tooltip();
+	});
+</script>	
+<script>	
+	$(document).ready(function(){
+	  $("#locateme").click(function(){
+	      $("#map").toggle();
+	      google.maps.event.trigger(map, 'resize');
+	  });
+	});
+</script>
+
+<!-- webfont Because sometimes web safe fonts may not be web safe (Mobile browsers) -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -53,34 +72,55 @@ Siddharth, Programmer, CV, Kumar Sidharth Resume, Kumar Sidharth CV, KumarSidhar
 					<a href="index.html"><img src="images/logo.jpg"></a>
 				</div>
 				<div class="social-icons">
-					<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
 					<div>
-					<a href="https://www.facebook.com/kumar.sidharth" target="_blank" title="facebook"><i class="facebook"></i></a>
-					<a href="https://www.twitter.com/sidmaxwell" target="_blank" title="twitter"><i class="twitter"></i></a>
-					<a href="https://in.linkedin.com/in/kumar-sidharth" target="_blank" title="LinkedIn"><i class="linkedin"></i></a>
-					<a href="skype:kumarsidharth1994?call" title="Skype Call"><i class="skype"></i></a>
-					<a href="https://www.youtube.com/user/ksidharth1994" target="_blank" title="YouTube Channel"><i class="youtube"></i></a>
-					<a href="https://www.quora.com/profile/Kumar-Sidharth-2" target="_blank" title="Quora"><i class="quora"></i></a>
+					<a href="https://www.facebook.com/kumar.sidharth" data-toggle="tooltip" data-placement="bottom" target="_blank" title="facebook"><i class="facebook"></i></a>
+					<a href="https://www.twitter.com/sidmaxwell" data-toggle="tooltip" data-placement="bottom" target="_blank" title="twitter"><i class="twitter"></i></a>
+					<a href="https://in.linkedin.com/in/kumar-sidharth" data-toggle="tooltip" data-placement="bottom" target="_blank" title="LinkedIn"><i class="linkedin"></i></a>
+					<a href="skype:kumarsidharth1994?call" data-toggle="tooltip" data-placement="bottom" title="Skype Call"><i class="skype"></i></a>
+					<a href="https://www.youtube.com/user/ksidharth1994" data-toggle="tooltip" data-placement="bottom" target="_blank" title="YouTube Channel"><i class="youtube"></i></a>
+					<a href="https://www.quora.com/profile/Kumar-Sidharth-2" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Quora"><i class="quora"></i></a>
 					</div>
 				</div>
 				<div class="clearfix"></div>
 			</div>
 			<div class="about_user">
 				<ul class="place">
-					<li><i class="location"></i>Bangalore</li>
-					
+					<li data-toggle="tooltip" style="cursor:pointer;" data-placement="bottom" title="my location">
+						<a id="locateme"><i class="location"></i>Bangalore</a>
+					</li>
 				</ul>
 				<ul class="message">
-					<i class="msg"></i>
-					<a href="mailto:kumar.sidharth@outlook.com?&body=Your%20website%20is%20awesome." style="color:#999999"; title="Click here to send me an Email">kumar.sidharth@outlook.com</a>
+					<li data-toggle="tooltip" data-placement="bottom" title="Click to send me an Email">
+						<a href="mailto:kumar.sidharth@outlook.com?&body=Your%20website%20is%20awesome." style="text-decoration:none";><i class="msg"></i>kumar.sidharth@outlook.com</a>
+					</li>
 				</ul>
 				<ul class="call">
-					<i class="phone"></i>
-					<a href="tel:+919611485112" style="color:#999999;text-decoration:none" title="Click here to Call me">+919611485112</li></a>
+					<li>
+					<a href="tel:+919611485112" style="text-decoration:none" data-toggle="tooltip" data-placement="bottom" title="Click to Call me"><i class="phone"></i>+919611485112</a>
+					</li>
 				</ul>
 				<div class="clearfix"></div>
 			</div>
-		<div class="text" title="About Me">
+			<div id="map" style="width:100%;height:300px;display:none"></div>
+			<!-- google maps api -->
+			<script>
+			function myMap() {
+			  var mapCanvas = document.getElementById("map");
+			  var myCenter = new google.maps.LatLng(12.961,77.5621);
+			  var mapOptions = {
+			    center: myCenter,
+			    zoom: 15
+			  };
+			  map = new google.maps.Map(mapCanvas, mapOptions);
+			  var marker = new google.maps.Marker({
+			  position: new google.maps.LatLng(12.953,77.5751),
+			  animation: google.maps.Animation.BOUNCE
+			  });
+			  marker.setMap(map);
+			}
+			</script>
+			<script src="https://maps.googleapis.com/maps/api/js?callback=myMap" async defer></script>
+		<div class="text" data-toggle="tooltip" data-placement="top" title="About Me">
 			<p>An <Strong>Analytical Programmer</strong>, Aspiring Web developer and Game Developer seeking a suitable entry level position in the Industry</p>
 		</div>
 		</div>
