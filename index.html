@@ -109,7 +109,8 @@ a:hover{
 			  var myCenter = new google.maps.LatLng(12.961,77.5621);
 			  var mapOptions = {
 			    center: myCenter,
-			    zoom: 15
+			    zoom: 15,
+			    scrollwheel: false
 			  };
 			  map = new google.maps.Map(mapCanvas, mapOptions);
 			  var marker = new google.maps.Marker({
