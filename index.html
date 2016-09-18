@@ -30,7 +30,7 @@ a:hover{
 <script>	
 	$(document).ready(function(){
 	  $("#locateme").click(function(){
-	      $("#map").slideToggle("slow");
+	      $("#map").toggle();
 	      google.maps.event.trigger(map, 'resize');
 	  });
 	});
