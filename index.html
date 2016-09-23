@@ -1,6 +1,6 @@
 <!--
 Author: Kumar Sidharth
-Author Contact: kumar.sidharth@outlook.com
+Contact: kumar.sidharth@outlook.com
 -->
 <!DOCTYPE html>
 <html>
@@ -19,13 +19,18 @@ Author Contact: kumar.sidharth@outlook.com
 Siddharth, Programmer, CV, Kumar Sidharth Resume, Kumar Sidharth CV, KumarSidharth, Kumarsidharth cv,kumarsidharth resume, web resume, web CV" />
 <style type="text/css">
 a:hover{
-	color: 	#8B0000;
-	}</style>
+	color: #000050;
+	cursor: pointer;
+	}
+body {
+	cursor: default;
+}	
+</style>
 <script type="application/x-javascript"> 
 	addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
 	$(document).ready(function(){
     	$('[data-toggle="tooltip"]').tooltip();
-	});
+	});	
 </script>	
 <script>	
 	$(document).ready(function(){
@@ -35,7 +40,32 @@ a:hover{
 	  });
 	});
 </script>
+<script>
+$(document).ready(function(){
+  // smooth scrolling to all links
+  $("a").on('click', function(event) {
 
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // jQuery's animate() method to add smooth page scroll
+      // (800) specifies the no. of milliseconds it takes to scroll
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 <!-- webfont Because sometimes web safe fonts may not be web safe (Mobile browsers) -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 </head>
@@ -53,14 +83,13 @@ a:hover{
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">My Résumé</a></li>
+        <li class="active"><a href="#">Overview</a></li>
         <li class="dropdown">
         <li><a href="#skills">Skills</a></li>
         <li><a href="#Projects">Projects</a></li>
         <li><a href="#Qualifications">Qualifications and Awards</a></li>
         <li><a href="kumarsidharth.github.io/Kumar Sidharth CV.pdf" download>Download my Résumé</a></li>
-      </ul>
-      
+      </ul>    
     </div>
   </div>
 </nav>
@@ -69,7 +98,7 @@ a:hover{
 		<div class="container">
 			<div class="header-top">
 				<div class="user">
-					<a href="index.html"><img src="images/logo.jpg"></a>
+					<img src="images/logo.jpg"></a>
 				</div>
 				<div class="social-icons">
 					<div>
@@ -109,8 +138,8 @@ a:hover{
 			  var myCenter = new google.maps.LatLng(12.961,77.5621);
 			  var mapOptions = {
 			    center: myCenter,
-			    zoom: 15,
-			    scrollwheel: false
+			    scrollwheel: false,
+			    zoom: 15
 			  };
 			  map = new google.maps.Map(mapCanvas, mapOptions);
 			  var marker = new google.maps.Marker({
@@ -258,7 +287,7 @@ a:hover{
 							<h5>2015</h5>
 						</div>
 						<div class="qualification">
-							<h4>Runner Up Cricket Tournament</h4>
+							<h4>Captained Runner Up Team</h4>
 							<p>BIT Hostel Cricket tournament</p>
 						</div>
 						<div class="clearfix"></div>
