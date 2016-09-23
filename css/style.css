@@ -198,6 +198,7 @@ i.sites {
 .about_user ul.call {
 	width:23%;
 	float:left;
+	text-align: center;
 }
 .about_user ul.sites {;
 }
@@ -216,7 +217,7 @@ i.sites {
 	color:#44b76f;
 }
 .text p {
-	color:#999999;
+	color:#777777;
 	font-size:2.6em;
 	font-weight:300;
 	line-height:1.8em;
@@ -258,7 +259,7 @@ i.sites {
 	height: 4px;
 	background:#34a09f;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .top-left-grid label.color2 {
@@ -266,7 +267,7 @@ i.sites {
 	height: 4px;
 	background:#b74488;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .top-left-grid label.color3 {
@@ -274,7 +275,7 @@ i.sites {
 	height: 4px;
 	background:#d58855;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .top-left-grid label.color4 {
@@ -282,7 +283,7 @@ i.sites {
 	height: 4px;
 	background:#8fa065;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .top-left-grid label.color5 {
@@ -290,7 +291,7 @@ i.sites {
 	height: 4px;
 	background:#7848c0;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .top-right-grid label.color6 {
@@ -298,7 +299,7 @@ i.sites {
 	height: 4px;
 	background:#6083f0;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .top-right-grid label.color7 {
@@ -306,7 +307,7 @@ i.sites {
 	height: 4px;
 	background:#b79c20;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .top-right-grid label.color8 {
@@ -314,7 +315,7 @@ i.sites {
 	height: 4px;
 	background:#44b76f;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .top-right-grid label.color9 {
@@ -322,7 +323,7 @@ i.sites {
 	height: 4px;
 	background:#f76040;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .top-right-grid label.color10 {
@@ -330,7 +331,7 @@ i.sites {
 	height: 4px;
 	background:#d8d8d8;
 	position:absolute;
-	bottom: -2px;
+	bottom: -6px;
 	left: 0;
 }
 .middle-grid {
@@ -1060,7 +1061,7 @@ label.span4 {
 	}
 	
 	.about_user ul li {
-		font-size: 1em;
+		font-size: 8.7pt;
 	}
 	i.location {
 		width: 20px;
@@ -1171,7 +1172,7 @@ label.span4 {
 		margin: 0.15em 0;
 	}
 	.event p {
-		font-size: 1em;
+		font-size: 8.7pt;
 		height: 68px;
 		overflow:hidden;
 	}
