@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar Sidharth - Lead Software Engineer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/12-column-grid/dist/grid.min.css">
+    <style>
+        :root {
+            --heading-color: #0099a1;
+            --page-top-background: white;
+            --page-bottom-background: #d7f6f7;
+            --body-color: #012729;
+            --link-color: #1645a2;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --heading-color: #7dadaf;
+                --page-top-background: black;
+                --page-bottom-background: #011010;
+                --body-color: #c0c0c0;
+                --link-color: #7d8eaf;
+            }
+        }
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            padding-block: 1cm;
+            padding-inline: 0;
+            background: linear-gradient(to top, var(--page-top-background), var(--page-bottom-background));
+            color: var(--body-color);
+            font-size: 10pt;
+            --inline-page-space: 1.27cm;
+            print-color-adjust: exact;
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            a {
+                color: var(--link-color);
+                text-decoration: underline;
+            }
+            a[href]:after {
+                content: "" !important;
+                color: var(--link-color)
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0;
+            color: var(--heading-color);
+        }
+
+        h1 {
+            font-weight: lighter;
+            font-size: 36pt;
+        }
+
+        h3 {
+            font-weight: lighter;
+            font-size: 20pt;
+        }
+
+        h4 {
+            letter-spacing: 1px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--link-color);
+        }
+
+        .chip {
+            display: inline-block;
+            padding: 4pt 4pt;
+            font-size: 8pt;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 4px;
+            background: var(--heading-color);
+            color: var(--page-bottom-background);
+        }
+
+        .invisible {
+            opacity: 0;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .space-between {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .page-inline-spacing {
+            padding-inline: var(--inline-page-space)
+        }
+
+        header ul {
+            list-style-type: none;
+            margin-block: 0;
+            padding-inline-start: 0;
+        }
+
+        section {
+            margin-top: 16pt;
+        }
+
+        .skills,
+        .work-description,
+        .courses,
+        .awards {
+            padding-inline-start: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="space-between page-inline-spacing">
+        <div>
+            <h1>Kumar Sidharth</h1>
+            <h3>Lead Software Engineer</h3>
+            <p style="margin-bottom: 0;">
+                <a href="" class="chip">JavaScript</a> <span class="invisible">,</span> 
+                <a href="" class="chip">TypeScript</a> <span class="invisible">,</span>
+                <a href="" class="chip">ReactJs</a> <span class="invisible">,</span>
+                <a href="" class="chip">Redux</a> <span class="invisible">,</span>
+                <a href="" class="chip">NodeJs</a> <span class="invisible">,</span>
+                <a href="" class="chip">ExpressJs</a> <span class="invisible">,</span>
+            </p>
+            <p style="margin-bottom: 0;">
+                
+                <a href="" class="chip">HTML</a> <span class="invisible">,</span>
+                <a href="" class="chip">CSS</a> <span class="invisible">,</span>
+                <a href="" class="chip">SCSS/Sass</a> <span class="invisible">,</span>
+                <a href="" class="chip">Material</a> <span class="invisible">,</span>
+                <a href="" class="chip">Web Components</a> <span class="invisible">,</span>
+                <a href="" class="chip">MongoDB</a> <span class="invisible">,</span>
+                <a href="" class="chip">Mongoose</a> <span class="invisible">,</span>
+            </p>
+        </div>
+        <ul>
+            <li>
+                <a href="tel:+919611485112">(+91) 9611485112</a>
+            </li>
+            <li>
+                <a href="mailto:k.sidharth1994@gmail.com">k.sidharth1994@gmail.com</a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/kumar-sidharth">LinkedIn - kumar-sidharth</a></li>
+            <li><a href="https://github.com/KumarSidharth">Github - KumarSidharth</a></li>
+            <li>Bengaluru, India</li>
+        </ul>
+    </header>
+    <main>
+        <section class="page-inline-spacing">
+            <h4>SUMMARY</h4>
+            <p>
+                Kumar Sidharth is a seasoned professional in software development with 6.5 years of experience.
+                He has exceptional skills in web performance optimization and is an expert in JavaScript, CSS and web development.
+                He has helped building products like
+                <a href="https://www.tirabeauty.com/">tirabeauty</a>,
+                <a href="https://www.jiomart.com/">Jiomart</a>,
+                <a href="https://fastapplyjobs.com/">FastApplyJobs</a>,
+                <a href="https://www.siemens.com/global/en/products/energy/energy-automation-and-smart-grid/power-quality-measurement/power-quality-monitoring-pq-advisor-compact.html">Siemens PQ Advisor Compact</a>
+                and many other products.
+            </p>
+        </section>
+        <!-- <section class="page-inline-spacing">
+            <h4>Skills</h4>
+            <ul class="skills">
+                <li>
+                    <a href="" class="chip">JavaScript</a> <span class="invisible">,</span> 
+                    <a href="" class="chip">TypeScript</a> <span class="invisible">,</span>
+                    <a href="" class="chip">ReactJs</a> <span class="invisible">,</span>
+                    <a href="" class="chip">Redux</a> <span class="invisible">,</span>
+                </li>
+            </ul>
+        </section> -->
+        <section class="page-inline-spacing">
+            <h4>WORK EXPERIENCE</h4>
+            <div class="work">
+                <p class="space-between">
+                    <span><b>Lead Software Engineer</b>, Reliance Retail (Fynd)</span>
+                    <span>Dec '22 - Dec '23</span>
+                </p>
+                <ul class="work-description">
+                    <li>Architected, lead and developed micro-frontend components for
+                        <a href="https://platform.fynd.com/help/docs/extensions/available-extensions/announcement-bar">Announcements</a>
+                        and
+                        <a href="https://platform.fynd.com/help/docs/extensions/available-extensions/whatsapp-order-notification/">
+                            WhatsApp order notifications
+                        </a>
+                    </li>
+                    <li>Standardized cross-enterprise libraries and tools to encourage code reuse and operational consistency among affiliated companies</li>
+                    <li>Collaborated with teams at Jiomart and Netmeds, enhancing inter-company technology initiatives</li>
+                    <li>Worked on Proof of concept(POC) for dynamic Progressive Web App (PWA) and Product subscription </li>
+                </ul>
+            </div>
+            <div class="work">
+                <p class="space-between">
+                    <span>
+                        <b>Senior Software Engineer</b>, Joveo
+                    </span>
+                    <span>June '21 to Nov '2022</span>
+                </p>
+                <ul class="work-description">
+                    <li>Improved code reliability and maintainability, increasing coverage significantly from non-existent to a strong 70%</li>
+                    <li>Significantly improved page load time for <a class="a" href="https://fastapplyjobs.com/">FastApplyJobs</a> from more than four seconds to blazing fast 200ms by implementing performance optimization techniques</li>
+                    <li>Led a team of five UI developers, using NextJs to optimize and innovate frontend development</li>
+                    <li>Implemented strict protocols for type-safety to strengthen software reliability and system stability</li>
+                    <li>Fostered a culture of best practices in maintaining clean and high-quality code</li>
+                </ul>
+            </div>
+            <div class="work">
+                <p class="space-between">
+                    <span>
+                        <b>Software Developer</b>, Siemens
+                    </span>
+                    <span>July '19 to May '2021</span>
+                </p>
+                <ul class="work-description">
+                    <li>Created BRD after requirement gathering for WMH (Brain MR) project, for
+                        <a href="https://www.siemens-healthineers.com/en-sg/digital-health-solutions/digital-solutions-overview/clinical-decision-support/ai-rad-companion/brain-mr">Siemens AIRAD companion - Brain MR</a>
+                    </li>
+                    <li>Created extensive libraries of reusable components, significantly speeding up development cycles and ensuring consistent UI across applications</li>
+                    <li>Conducted trainings and seminars for complex layout creation concepts using SCSS</li>
+                    <li>Implemented strict code review standards, boosting code coverage to 92%</li>
+                    <li>Initiated projects aimed at continuously improving code quality, establishing a reputation for best practices</li>
+                </ul>
+            </div>
+            <div class="work">
+                <p class="space-between">
+                    <span>
+                        <b>Senior Associate</b>, Simeio Solutions, R&D
+                    </span>
+                    <span>July '19 to May '2021</span>
+                </p>
+                <ul class="work-description">
+                    <li>Migrated <a href="https://simeio.com/simeio-io/">Simeio Io</a>, a big frontend app from AngularJS to Angular 5, while enhancing the performance</li>
+                    <li>Created flexible theming that dynamically adjusts the user interface appearance based on an API response</li>
+                    <li>Engineered advanced dynamic forms powered by JSON data obtained from RESTful APIs</li>
+                </ul>
+            </div>
+        </section>
+        <div class="space-between page-inline-spacing">
+            <section>
+                <h4>COURSES</h4>
+                <ul class="courses">
+                    <li><a href="https://youtu.be/vqXLGX0szIQ?si=LOHVurCVSo_0FfLl">Motion Design for the Web (Envato Tuts+)</a></li>
+                    <li><a href="https://www.udemy.com/share/101Way3@rmz68oXC1tCrDhFKVLh9HrgokUVYtzW89WBhEKXXSoyNy00-0Bi9nUVgfwyFO28x/">React - The Complete Guide (Maximilian Schwarzmüller)</a></li>
+                    <li><a href="https://www.udemy.com/share/101r4c3@Yi3bxuuiVhFUx9Zi9KHe8HyEWxcBbB8m0cdUKnyE-xfeO4g1swo5mN4j2pG-pkT5/">NodeJS - The Complete Guide (Maximilian Schwarzmüller)</a></li>
+                    <li><a href="https://frontendmasters.com/courses/javascript-hard-parts-v2/">JavaScript: The Hard Parts (Will Sentance)</a></li>
+                    <li><a href="https://frontendmasters.com/courses/intermediate-typescript/">Intermediate TypeScript (Mike North)</a></li>
+                    <li><a href="https://frontendmasters.com/courses/dev-tools/">Introduction to Dev Tools (Jon Kuperman)</a></li>
+                    <li><a href="https://frontendmasters.com/courses/accessibility-v2/">Website Accessibility (Jon Kuperman)</a></li>
+                    <li><a href="https://frontendmasters.com/courses/web-perf/">Web Performance Fundamentals (Todd Gardner)</a></li>
+                    <li><a href="https://frontendmasters.com/courses/mongodb/">Introduction to MongoDB (Scott Moss)</a></li>
+                    <li><a href="https://www.udemy.com/share/101WAU3@sjn6avZ6GC9K1Eaj3FIMNFSARwmprEeqyRRy8KGqGCjvSFVa4TZxzBATd5RbKzZp/">Angular - The Complete Guide (Maximilian Schwarzmüller)</a></li>
+                    <li><a href="https://frontendmasters.com/courses/html-email-v2/">HTML Email Development (Jason Rodriguez)</a></li>
+                </ul>
+            </section>
+            <div>
+                <section>
+                    <h4>EDUCATION</h4>
+                    <p style="margin-bottom: 0;">
+                        <b>Bachelor of Engineering</b>, 2017
+                    </p>
+                    <div>Computer Science and Engineering</div>
+                    <div>
+                        <a href="https://bit-bangalore.edu.in/">
+                            Bangalore Institute of Technology (BIT), Bangalore
+                        </a>
+                    </div>
+                    <a href="https://vtu.ac.in/en/"><i>Visvesvaraya Technological University</i></a>
+                </section>
+                <section>
+                    <h4>AWARDS</h4>
+                    <ul class="awards">
+                        <li>Design Thinking - Reliance Retail(Fynd), 2023</li>
+                        <li>Code Quality Award - Siemens, 2021</li>
+                        <li>Spot Award - Siemens, 2020</li>
+                        <li>Star of Simeio, 2019</li>
+                        <li>Team of The Year - Simeio, 2018</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
