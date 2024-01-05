@@ -1,4 +1,15 @@
-@media only screen and (orientation : portrait) and (max-width: 500px){
+
+@media print {
+	* {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+	a[href]:after {
+		content: none !important;
+	}
+}
+
+@media (orientation : portrait) and (max-width: 500px){
 	.about_user ul.place {
 		width: 22%; float: left;
 	}
@@ -12,12 +23,12 @@
 	.about_user{font-size: 10px;
 	text-align: center;}
 }
-body{
-	text-decoration:none
+body {
+	text-decoration:none;
 	padding:0;
 	margin:0;
 	font-family: 'Open Sans', sans-serif;
-	background:#fff;
+	background: #fff;
 }
 body a{
     transition:0.5s all;
@@ -200,8 +211,7 @@ i.sites {
 	float:left;
 	text-align: center;
 }
-.about_user ul.sites {;
-}
+
 .about_user ul li {
 	display:inline-block;
 	color:#999999;
@@ -494,7 +504,7 @@ label.span4 {
 }
 /*-- responsive-design starts-here --*/
 
-@media screen and (max-width: 1366px) {
+@media (max-width: 1366px) {
 	.about_user {
 		padding: 1.3em 0;
 		margin: 3.2em 0;
@@ -506,7 +516,7 @@ label.span4 {
 		padding: 4em 0;
 	}
 }
-@media screen and (max-width: 1280px) {
+@media (max-width: 1280px) {
 	.bottom-grid {
 		padding: 6em 0;
 	}
@@ -521,7 +531,7 @@ label.span4 {
 		width: 95%;
 	}
 }
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
 	i.love,i.location,i.msg,i.sites {
 		margin-right: 1px;
 	}
@@ -703,7 +713,7 @@ label.span4 {
 		width: 30%;
 	}
 }
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
 	.footer {
 		padding: 2em 0;
 	}
@@ -811,7 +821,7 @@ label.span4 {
 	.top-right-grid label.color8{
 		width: 75%;
 	}
-	 .top-right-grid label.color10 {
+	.top-right-grid label.color10 {
 		width: 90%;
 	}
 	.text p {
@@ -832,9 +842,6 @@ label.span4 {
 	.about_user ul.place {
 		width: 24%;
 	}
-	.about_user ul.status {
-		;
-	}
 	.about_user ul.message {
 		width: 50%;
 	}
@@ -846,7 +853,7 @@ label.span4 {
 		margin: 1.8em 0;
 	}
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 	.middle-grid h3 {
 		margin-bottom: 1.5em;
 	}
@@ -863,7 +870,7 @@ label.span4 {
 		font-size: 1.6em;
 	}
 }
-@media screen and (max-width: 640px) {
+@media (max-width: 640px) {
 	.top-strip {
 		padding: 0.8em;
 	}
@@ -1037,7 +1044,7 @@ label.span4 {
 		margin: 1.5em 0;
 	}
 }
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 	.social-icons i {
 		margin-right: 0px;
 	}
@@ -1199,9 +1206,9 @@ label.span4 {
 		float: right;
 	}
 }
-@media screen and (max-width: 320px) {
+@media (max-width: 320px) {
 	.about_user ul.message {
-	 float: center;
+		float: center;
 	}
 	.about_user ul.place {
 		float: center;
