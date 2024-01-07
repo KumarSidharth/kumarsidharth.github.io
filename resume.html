@@ -125,11 +125,13 @@
             margin-top: 16pt;
         }
 
-        .work-title {
+        .work-title,
+        .side-project-title {
             margin-block-end: 1mm;
         }
 
-        .work-description {
+        .work-description,
+        .side-project-description {
             margin-block-start: 1mm;
         }
 
@@ -138,6 +140,10 @@
         .courses,
         .awards {
             padding-inline-start: 1rem;
+        }
+
+        .page-break-after {
+            page-break-after: always;
         }
 
     </style>
@@ -203,14 +209,14 @@
                     <span>Dec '22 - Dec '23</span>
                 </p>
                 <ul class="work-description">
-                    <li>Architected, lead and developed micro-frontend components for
+                    <li>Worked on all steps of software development lifecycle in creating micro-frontend components for
                         <a href="https://platform.fynd.com/help/docs/extensions/available-extensions/announcement-bar">Announcements</a>
                         and
                         <a href="https://platform.fynd.com/help/docs/extensions/available-extensions/whatsapp-order-notification/">
                             WhatsApp order notifications
-                        </a>
+                        </a> using VueJs and ReactJs
                     </li>
-                    <li>Created libraries and tools to encourage code reuse and consistency among affiliated companies</li>
+                    <li>Created libraries and tools to encourage code reuse and consistency among cross-functional team and affiliated companies</li>
                     <li>Collaborated with teams at Jiomart and Netmeds, enhancing inter-company technology initiatives</li>
                     <li>Worked on Proof of concept(POC) for dynamic Progressive Web App (PWA) and Product subscription </li>
                 </ul>
@@ -225,9 +231,9 @@
                 <ul class="work-description">
                     <li>Improved code reliability and maintainability, increasing coverage significantly from non-existent to a strong 70%</li>
                     <li>Significantly improved page load time for <a class="a" href="https://fastapplyjobs.com/">FastApplyJobs</a> from more than four seconds to blazing fast 200ms by implementing performance optimization techniques</li>
-                    <li>Led a team of five UI developers, using NextJs to optimize and innovate frontend development</li>
+                    <li>Led a team of five UI developers, using NextJs and mentor junior engineers</li>
                     <li>Implemented strict protocols for type-safety to strengthen software reliability and system stability</li>
-                    <li>Fostered a culture of best practices in maintaining clean and high-quality code</li>
+                    <li>Fostered a culture of best practices for maintainable and extendable product</li>
                 </ul>
             </div>
             <div class="work">
@@ -238,11 +244,11 @@
                     <span>July '19 to May '2021</span>
                 </p>
                 <ul class="work-description">
-                    <li>Created BRD after requirement gathering for WMH (Brain MR) project, for
+                    <li>Collaborated with product managers and worked on requirement gathering for WMH (Brain MR) project, for
                         <a href="https://www.siemens-healthineers.com/en-sg/digital-health-solutions/digital-solutions-overview/clinical-decision-support/ai-rad-companion/brain-mr">Siemens AIRAD companion - Brain MR</a>
                     </li>
                     <li>Created extensive libraries of reusable components, significantly speeding up development cycles and ensuring consistent UI across applications</li>
-                    <li>Conducted trainings and seminars for complex layout creation concepts using SCSS</li>
+                    <li>Conducted trainings and seminars for complex layout creation concepts using SCSS and web-accessibility </li>
                     <li>Implemented strict code review standards, boosting code coverage to 92%</li>
                     <li>Initiated projects aimed at continuously improving code quality, establishing a reputation for best practices</li>
                 </ul>
@@ -278,7 +284,7 @@
                     <li><a href="https://frontendmasters.com/courses/html-email-v2/">HTML Email Development (Jason Rodriguez)</a></li>
                 </ul>
             </section>
-            <div>
+            <div class="page-break-after">
                 <section>
                     <h4>EDUCATION</h4>
                     <p style="margin-bottom: 0;">
@@ -304,6 +310,36 @@
                 </section>
             </div>
         </div>
+        <section class="page-inline-spacing">
+            <h4>WEEKEND SIDE PROJECTS</h4>
+            <p class="side-project-title">
+                <b><a href="https://www.npmjs.com/package/12-column-grid">12-column-grid - NPM </a></b>
+            </p>
+            <p class="side-project-description">
+                An open-source project published on NPM that gives utility classes based on responsive design for mobile first development.
+                It creates 12 column responsive grid layout.
+                Other features are customizable, light weight, zero production dependency.
+                The class names are same as that of bootstrap.
+                It uses SCSS Source code and utilizes the powerful display:grid to create columns
+            </p>
+            <p class="side-project-title">
+                <b>Easily 365 - Online Tuition App</b>
+            </p>
+            <p class="side-project-description">
+                Live streaming of tuition classes during Covid lockdown.
+                Focussed towards zero cost of operation.
+                Angular, NodeJs, ExpressJs, web-sockets, Socket.io, MongoDB, Mongoose.
+                Hosted on Heroku
+            </p>
+            <p class="side-project-title">
+                <b><a href="https://kumarsidharth.github.io/indianHomeWarming/">Indian Home Warming - Web Invitation</a></b>
+            </p>
+            <p class="side-project-description">
+                A simple seb invitation to relatives for home warming event in my family a few years ago.
+                Hosted using github docs.
+                The design is inspired by notebook. Mobile friendly and cross browser compatibility tested. Technology used - HTML, SCSS and Typescript
+            </p>
+        </section>
     </main>
 </body>
 </html>
