@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kumar Sidharth - Lead Software Engineer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/12-column-grid/dist/grid.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <style>
         :root {
             --heading-color: #0099a1;
@@ -92,7 +93,7 @@
         }
 
         li {
-            margin-bottom: 4px;
+            margin-bottom: 1mm;
         }
 
         .space-between {
@@ -102,10 +103,19 @@
         }
 
         .page-inline-spacing {
-            padding-inline: var(--inline-page-space)
+            padding-inline: var(--inline-page-space);
+            max-width: 210mm;
+            margin-inline: auto;
         }
 
-        header ul {
+        header {
+            position: relative;
+        }
+
+        .contacts {
+            position: absolute;
+            top: -2mm;
+            right: var(--inline-page-space);
             list-style-type: none;
             margin-block: 0;
             padding-inline-start: 0;
@@ -113,6 +123,14 @@
 
         section {
             margin-top: 16pt;
+        }
+
+        .work-title {
+            margin-block-end: 1mm;
+        }
+
+        .work-description {
+            margin-block-start: 1mm;
         }
 
         .skills,
@@ -130,34 +148,37 @@
             <h1>Kumar Sidharth</h1>
             <h3>Lead Software Engineer</h3>
             <p style="margin-bottom: 0;">
-                <a href="" class="chip">JavaScript</a> <span class="invisible">,</span> 
-                <a href="" class="chip">TypeScript</a> <span class="invisible">,</span>
-                <a href="" class="chip">ReactJs</a> <span class="invisible">,</span>
-                <a href="" class="chip">Redux</a> <span class="invisible">,</span>
-                <a href="" class="chip">NodeJs</a> <span class="invisible">,</span>
-                <a href="" class="chip">ExpressJs</a> <span class="invisible">,</span>
-            </p>
-            <p style="margin-bottom: 0;">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="chip" target="_blank" rel="noopener">JavaScript</a> <span class="invisible">,</span> 
+                <a href="https://www.typescriptlang.org/" class="chip" target="_blank" rel="noopener">TypeScript</a> <span class="invisible">,</span>
+                <a href="https://react.dev/" target="_blank" rel="noopener" class="chip">ReactJs</a> <span class="invisible">,</span>
+                <a href="https://redux.js.org/" class="chip">Redux</a> <span class="invisible">,</span>
                 
-                <a href="" class="chip">HTML</a> <span class="invisible">,</span>
-                <a href="" class="chip">CSS</a> <span class="invisible">,</span>
-                <a href="" class="chip">SCSS/Sass</a> <span class="invisible">,</span>
-                <a href="" class="chip">Material</a> <span class="invisible">,</span>
-                <a href="" class="chip">Web Components</a> <span class="invisible">,</span>
-                <a href="" class="chip">MongoDB</a> <span class="invisible">,</span>
-                <a href="" class="chip">Mongoose</a> <span class="invisible">,</span>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="chip" target="_blank" rel="noopener">HTML</a> <span class="invisible">,</span>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="chip" target="_blank" rel="noopener">CSS</a> <span class="invisible">,</span>
+                <a href="https://sass-lang.com/" class="chip" target="_blank" rel="noopener">SCSS/Sass</a> <span class="invisible">,</span>
+                <a href="https://mui.com/material-ui/" class="chip" target="_blank" rel="noopener">Material</a> <span class="invisible">,</span>
+                <a href="https://www.webcomponents.org/" class="chip" target="_blank" rel="noopener">Web Components</a> <span class="invisible">,</span>
+            </p>
+            <p style="margin-bottom: 0; margin-top: 2mm;">
+                <a href="https://nodejs.org/en" class="chip" target="_blank" rel="noopener">NodeJs</a> <span class="invisible">,</span>
+                <a href="https://expressjs.com/" class="chip" target="_blank" rel="noopener">ExpressJs</a> <span class="invisible">,</span>
+                <a href="https://www.mongodb.com/" class="chip" target="_blank" rel="noopener">MongoDB</a> <span class="invisible">,</span>
+                <a href="https://mongoosejs.com/" class="chip" target="_blank" rel="noopener">Mongoose</a> <span class="invisible">,</span>
+                <a href="https://www.docker.com/" class="chip" target="_blank" rel="noopener">Docker</a> <span class="invisible">,</span>
+                <a href="https://graphql.org/" class="chip" target="_blank" rel="noopener">GraphQL</a> <span class="invisible">,</span>
+                <a href="https://nextjs.org/" class="chip" target="_blank" rel="noopener">NextJs</a> <span class="invisible">,</span>
             </p>
         </div>
-        <ul>
+        <ul class="contacts">
             <li>
-                <a href="tel:+919611485112">(+91) 9611485112</a>
+                <a href="tel:+919611485112"><i class="fa fa-phone"></i> (+91) 9611485112</a>
             </li>
             <li>
-                <a href="mailto:k.sidharth1994@gmail.com">k.sidharth1994@gmail.com</a>
+                <a href="mailto:k.sidharth1994@gmail.com"><i class="fa fa-envelope"></i> k.sidharth1994@gmail.com</a>
             </li>
-            <li><a href="https://www.linkedin.com/in/kumar-sidharth">LinkedIn - kumar-sidharth</a></li>
-            <li><a href="https://github.com/KumarSidharth">Github - KumarSidharth</a></li>
-            <li>Bengaluru, India</li>
+            <li><a href="https://www.linkedin.com/in/kumar-sidharth"><i class="fa fa-linkedin"></i> LinkedIn - kumar-sidharth</a></li>
+            <li><a href="https://github.com/KumarSidharth"><i class="fa fa-github"></i> Github - KumarSidharth</a></li>
+            <li><i class="fa fa-location-arrow"></i> Bengaluru, India</li>
         </ul>
     </header>
     <main>
@@ -174,21 +195,10 @@
                 and many other products.
             </p>
         </section>
-        <!-- <section class="page-inline-spacing">
-            <h4>Skills</h4>
-            <ul class="skills">
-                <li>
-                    <a href="" class="chip">JavaScript</a> <span class="invisible">,</span> 
-                    <a href="" class="chip">TypeScript</a> <span class="invisible">,</span>
-                    <a href="" class="chip">ReactJs</a> <span class="invisible">,</span>
-                    <a href="" class="chip">Redux</a> <span class="invisible">,</span>
-                </li>
-            </ul>
-        </section> -->
         <section class="page-inline-spacing">
             <h4>WORK EXPERIENCE</h4>
             <div class="work">
-                <p class="space-between">
+                <p class="work-title space-between">
                     <span><b>Lead Software Engineer</b>, Reliance Retail (Fynd)</span>
                     <span>Dec '22 - Dec '23</span>
                 </p>
@@ -200,13 +210,13 @@
                             WhatsApp order notifications
                         </a>
                     </li>
-                    <li>Standardized cross-enterprise libraries and tools to encourage code reuse and operational consistency among affiliated companies</li>
+                    <li>Created libraries and tools to encourage code reuse and consistency among affiliated companies</li>
                     <li>Collaborated with teams at Jiomart and Netmeds, enhancing inter-company technology initiatives</li>
                     <li>Worked on Proof of concept(POC) for dynamic Progressive Web App (PWA) and Product subscription </li>
                 </ul>
             </div>
             <div class="work">
-                <p class="space-between">
+                <p class="work-title space-between">
                     <span>
                         <b>Senior Software Engineer</b>, Joveo
                     </span>
@@ -221,7 +231,7 @@
                 </ul>
             </div>
             <div class="work">
-                <p class="space-between">
+                <p class="work-title space-between">
                     <span>
                         <b>Software Developer</b>, Siemens
                     </span>
@@ -238,7 +248,7 @@
                 </ul>
             </div>
             <div class="work">
-                <p class="space-between">
+                <p class="work-title space-between">
                     <span>
                         <b>Senior Associate</b>, Simeio Solutions, R&D
                     </span>
