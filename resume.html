@@ -13,6 +13,7 @@
             --page-bottom-background: #d7f6f7;
             --body-color: #012729;
             --link-color: #1645a2;
+            --inline-page-space: 24px;
         }
         @media (prefers-color-scheme: dark) {
             :root {
@@ -31,7 +32,6 @@
             background: linear-gradient(to top, var(--page-top-background), var(--page-bottom-background));
             color: var(--body-color);
             font-size: 10pt;
-            --inline-page-space: 1.27cm;
             print-color-adjust: exact;
         }
 
@@ -55,15 +55,13 @@
             padding: 0;
             color: var(--heading-color);
         }
-
         h1 {
+            font-size: 30pt;
             font-weight: lighter;
-            font-size: 36pt;
         }
-
         h3 {
+            font-size: 18pt;
             font-weight: lighter;
-            font-size: 20pt;
         }
 
         h4 {
@@ -113,12 +111,18 @@
         }
 
         .contacts {
-            position: absolute;
-            top: -2mm;
-            right: var(--inline-page-space);
+            /* position: absolute; */
+            /* top: -2mm; */
+            /* right: var(--inline-page-space); */
             list-style-type: none;
             margin-block: 0;
             padding-inline-start: 0;
+            margin-block-start: 2mm;
+        }
+
+        .contacts li a {
+            display: flex;
+            gap: 2mm;
         }
 
         section {
@@ -135,7 +139,6 @@
             margin-block-start: 1mm;
         }
 
-        .skills,
         .work-description,
         .courses,
         .awards {
@@ -146,6 +149,44 @@
             page-break-after: always;
         }
 
+        .skills {
+            display: grid;
+            gap: 2mm;
+            padding-block-start: 2mm;
+        }
+
+        .skill-line {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 2mm;
+        }
+
+        @media (width >= 620px) {
+            :root {
+                --inline-page-space: 1.27cm;
+            }
+            h1 {
+                font-size: 36pt;
+            }
+
+            h3 {
+                font-size: 20pt;
+            }
+            .contacts {
+                margin-block-start: 0;
+            }
+            .contacts li {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            .contacts li a {
+                flex-direction: row-reverse;
+            }
+            .skills {
+                padding-block-start: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -153,27 +194,7 @@
         <div>
             <h1>Kumar Sidharth</h1>
             <h3>Lead Software Engineer</h3>
-            <p style="margin-bottom: 0;">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="chip" target="_blank" rel="noopener">JavaScript</a> <span class="invisible">,</span> 
-                <a href="https://www.typescriptlang.org/" class="chip" target="_blank" rel="noopener">TypeScript</a> <span class="invisible">,</span>
-                <a href="https://react.dev/" target="_blank" rel="noopener" class="chip">ReactJs</a> <span class="invisible">,</span>
-                <a href="https://redux.js.org/" class="chip">Redux</a> <span class="invisible">,</span>
-                
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="chip" target="_blank" rel="noopener">HTML</a> <span class="invisible">,</span>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="chip" target="_blank" rel="noopener">CSS</a> <span class="invisible">,</span>
-                <a href="https://sass-lang.com/" class="chip" target="_blank" rel="noopener">SCSS/Sass</a> <span class="invisible">,</span>
-                <a href="https://mui.com/material-ui/" class="chip" target="_blank" rel="noopener">Material</a> <span class="invisible">,</span>
-                <a href="https://www.webcomponents.org/" class="chip" target="_blank" rel="noopener">Web Components</a> <span class="invisible">,</span>
-            </p>
-            <p style="margin-bottom: 0; margin-top: 2mm;">
-                <a href="https://nodejs.org/en" class="chip" target="_blank" rel="noopener">NodeJs</a> <span class="invisible">,</span>
-                <a href="https://expressjs.com/" class="chip" target="_blank" rel="noopener">ExpressJs</a> <span class="invisible">,</span>
-                <a href="https://www.mongodb.com/" class="chip" target="_blank" rel="noopener">MongoDB</a> <span class="invisible">,</span>
-                <a href="https://mongoosejs.com/" class="chip" target="_blank" rel="noopener">Mongoose</a> <span class="invisible">,</span>
-                <a href="https://www.docker.com/" class="chip" target="_blank" rel="noopener">Docker</a> <span class="invisible">,</span>
-                <a href="https://graphql.org/" class="chip" target="_blank" rel="noopener">GraphQL</a> <span class="invisible">,</span>
-                <a href="https://nextjs.org/" class="chip" target="_blank" rel="noopener">NextJs</a> <span class="invisible">,</span>
-            </p>
+            
         </div>
         <ul class="contacts">
             <li>
@@ -184,9 +205,32 @@
             </li>
             <li><a href="https://www.linkedin.com/in/kumar-sidharth"><i class="fa fa-linkedin"></i> LinkedIn - kumar-sidharth</a></li>
             <li><a href="https://github.com/KumarSidharth"><i class="fa fa-github"></i> Github - KumarSidharth</a></li>
-            <li><i class="fa fa-location-arrow"></i> Bengaluru, India</li>
+            <li><a href="https://www.google.com/maps/place/Bengaluru,+Karnataka"> <i class="fa fa-location-arrow"></i> Bengaluru, India </a></li>
         </ul>
     </header>
+    <div class="skills page-inline-spacing">
+        <div class="skill-line">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="chip" target="_blank" rel="noopener">JavaScript</a> <span class="invisible">,</span> 
+            <a href="https://www.typescriptlang.org/" class="chip" target="_blank" rel="noopener">TypeScript</a> <span class="invisible">,</span>
+            <a href="https://react.dev/" target="_blank" rel="noopener" class="chip">ReactJs</a> <span class="invisible">,</span>
+            <a href="https://redux.js.org/" class="chip">Redux</a> <span class="invisible">,</span>
+            
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="chip" target="_blank" rel="noopener">HTML</a> <span class="invisible">,</span>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="chip" target="_blank" rel="noopener">CSS</a> <span class="invisible">,</span>
+            <a href="https://sass-lang.com/" class="chip" target="_blank" rel="noopener">SCSS/Sass</a> <span class="invisible">,</span>
+            <a href="https://mui.com/material-ui/" class="chip" target="_blank" rel="noopener">Material</a> <span class="invisible">,</span>
+            <a href="https://www.webcomponents.org/" class="chip" target="_blank" rel="noopener">Web Components</a> <span class="invisible">,</span>
+        </div>
+        <div class="skill-line">
+            <a href="https://nodejs.org/en" class="chip" target="_blank" rel="noopener">NodeJs</a> <span class="invisible">,</span>
+            <a href="https://expressjs.com/" class="chip" target="_blank" rel="noopener">ExpressJs</a> <span class="invisible">,</span>
+            <a href="https://www.mongodb.com/" class="chip" target="_blank" rel="noopener">MongoDB</a> <span class="invisible">,</span>
+            <a href="https://mongoosejs.com/" class="chip" target="_blank" rel="noopener">Mongoose</a> <span class="invisible">,</span>
+            <a href="https://www.docker.com/" class="chip" target="_blank" rel="noopener">Docker</a> <span class="invisible">,</span>
+            <a href="https://graphql.org/" class="chip" target="_blank" rel="noopener">GraphQL</a> <span class="invisible">,</span>
+            <a href="https://nextjs.org/" class="chip" target="_blank" rel="noopener">NextJs</a> <span class="invisible">,</span>
+        </div>
+    </div>
     <main>
         <section class="page-inline-spacing">
             <h4>SUMMARY</h4>
