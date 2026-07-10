@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kumar Sidharth — Lead Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #11141a;
+    --surface: #1a1f28;
+    --surface-2: #212733;
+    --hairline: #2b3240;
+    --text: #e9e7e0;
+    --text-dim: #9199a8;
+    --text-faint: #5c6577;
+    --amber: #d9a441;
+    --amber-dim: #6b5a2e;
+    --sage: #5fa88c;
+    --sage-dim: #2c4a3f;
+    --diff-add: #6fbf87;
+    --diff-add-bg: rgba(111,191,135,0.08);
+    --diff-rm: #d97757;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Inter', sans-serif;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    background: var(--ink);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection{ background: var(--amber); color: var(--ink); }
+
+  a{ color: var(--sage); text-decoration: none; }
+  a:hover{ text-decoration: underline; }
+  a:focus-visible, button:focus-visible{ outline: 2px solid var(--amber); outline-offset: 3px; }
+
+  .wrap{ max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  .mono{ font-family: var(--mono); }
+  .eyebrow{
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .eyebrow::before{
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--sage);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--sage);
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(17,20,26,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  nav .wrap{
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  .nav-brand{ font-family: var(--mono); font-size: 14px; color: var(--text); font-weight: 600; }
+  .nav-brand span{ color: var(--amber); }
+  .nav-links{ display: flex; gap: 24px; font-family: var(--mono); font-size: 13px; }
+  .nav-links a{ color: var(--text-dim); }
+  .nav-links a:hover{ color: var(--amber); text-decoration: none; }
+  .nav-links{ display: none; }
+  @media(min-width: 640px){ .nav-links{ display: flex; } }
+
+  /* ---------- HERO ---------- */
+  header.hero{ padding: 96px 0 64px; border-bottom: 1px solid var(--hairline); }
+  .terminal{
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px -30px rgba(0,0,0,0.6);
+  }
+  .terminal-bar{
+    display: flex; align-items: center; gap: 6px;
+    padding: 10px 14px;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .dot{ width: 10px; height: 10px; border-radius: 50%; }
+  .dot.r{ background: #d97757; } .dot.y{ background: var(--amber); } .dot.g{ background: var(--sage); }
+  .terminal-title{ margin-left: 10px; font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
+  .terminal-body{ padding: 28px 24px 32px; font-family: var(--mono); }
+  .prompt-line{ color: var(--text-dim); font-size: 14px; margin-bottom: 4px; }
+  .prompt-line .sym{ color: var(--sage); }
+  h1.name{
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 10px 0 6px;
+  }
+  .role-line{
+    font-size: clamp(15px, 2.4vw, 19px);
+    color: var(--amber);
+    margin-bottom: 22px;
+  }
+  .cursor{
+    display: inline-block; width: 9px; height: 1.1em;
+    background: var(--amber);
+    animation: blink 1s step-start infinite;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+  }
+  @keyframes blink{ 50%{ opacity: 0; } }
+
+  .stat-row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 16px;
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px dashed var(--hairline);
+  }
+  .stat .k{ font-size: clamp(16px, 2.4vw, 22px); font-weight: 700; color: var(--text); font-family: var(--mono); white-space: nowrap; }
+  .stat .v{ font-size: 12px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+
+  .stack-line{
+    margin-top: 26px; padding-top: 22px; border-top: 1px dashed var(--hairline);
+    font-family: var(--mono); font-size: 14px; color: var(--text-dim);
+  }
+  .stack-kw{ color: var(--sage); }
+  .stack-op{ color: var(--text-faint); }
+  .stack-chips{ display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 10px 18px; }
+  .hchip{
+    font-family: var(--mono); font-size: 13px;
+    padding: 7px 13px; border-radius: 5px;
+    background: var(--surface-2); border: 1px solid var(--amber-dim); color: var(--amber);
+  }
+
+  .hero-links{ display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+  .btn{
+    font-family: var(--mono); font-size: 13px;
+    padding: 10px 18px; border-radius: 6px;
+    border: 1px solid var(--hairline);
+    color: var(--text);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn:hover{ border-color: var(--amber); color: var(--amber); text-decoration: none; }
+  .btn.primary{ background: var(--amber); color: var(--ink); border-color: var(--amber); font-weight: 700; }
+  .btn.primary:hover{ color: var(--ink); opacity: 0.9; }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{ padding: 72px 0; border-bottom: 1px solid var(--hairline); }
+  section h2{
+    font-family: var(--mono);
+    font-size: 22px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  section > .wrap > p.lede{ color: var(--text-dim); max-width: 60ch; margin-bottom: 36px; }
+
+  /* ---------- SUMMARY ---------- */
+  .summary-text{ font-size: 17px; color: var(--text-dim); max-width: 70ch; }
+  .summary-text strong{ color: var(--text); font-weight: 600; }
+
+  /* ---------- GIT LOG EXPERIENCE ---------- */
+  .gitlog{ position: relative; }
+  .gitlog::before{
+    content:'';
+    position: absolute; left: 7px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(var(--hairline), var(--hairline) 90%, transparent);
+  }
+  .commit{ position: relative; padding-left: 34px; margin-bottom: 46px; }
+  .commit:last-child{ margin-bottom: 0; }
+  .commit-node{
+    position: absolute; left: 0; top: 4px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--ink);
+    border: 2px solid var(--sage);
+  }
+  .commit-node.current{ border-color: var(--amber); box-shadow: 0 0 0 4px var(--amber-dim); }
+  .commit-head{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .commit-hash{ font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
+  .commit-tag{
+    font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 2px 8px; border-radius: 4px; border: 1px solid var(--sage-dim); color: var(--sage);
+  }
+  .commit-tag.head{ border-color: var(--amber-dim); color: var(--amber); }
+  .commit-role{ font-size: 19px; font-weight: 700; color: var(--text); }
+  .commit-meta{ font-family: var(--mono); font-size: 12.5px; color: var(--text-faint); margin-bottom: 16px; }
+  .diff{
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 13px;
+    overflow: hidden;
+  }
+  .diff-line{ padding: 9px 14px; border-bottom: 1px solid var(--hairline); display: flex; gap: 10px; }
+  .diff-line:last-child{ border-bottom: none; }
+  .diff-line .sign{ color: var(--diff-add); flex-shrink: 0; user-select: none; }
+  .diff-line.add{ background: var(--diff-add-bg); }
+  .diff-line span.metric{ color: var(--amber); font-weight: 600; }
+
+  /* ---------- STACK / EXPERTISE ---------- */
+  .stack-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+  .stack-cat .eyebrow{ margin-bottom: 12px; }
+  .chip-row{ display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip{
+    font-family: var(--mono); font-size: 12.5px;
+    padding: 6px 12px; border-radius: 5px;
+    background: var(--surface); border: 1px solid var(--hairline); color: var(--text-dim);
+  }
+
+  /* ---------- AWARDS ---------- */
+  .award-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 14px; }
+  .award{
+    background: var(--surface); border: 1px solid var(--hairline); border-radius: 8px;
+    padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start;
+  }
+  .award .medal{ font-family: var(--mono); color: var(--amber); font-size: 18px; margin-top: 1px; }
+  .award .t{ font-weight: 600; color: var(--text); font-size: 14.5px; }
+  .award .s{ font-size: 13px; color: var(--text-faint); margin-top: 2px; }
+
+  /* ---------- OSS ---------- */
+  .repo-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; }
+  .repo{
+    background: var(--surface); border: 1px solid var(--hairline); border-radius: 8px;
+    padding: 20px; transition: border-color .2s ease, transform .2s ease;
+  }
+  .repo:hover{ border-color: var(--sage); transform: translateY(-2px); }
+  .repo-name{ font-family: var(--mono); font-weight: 700; color: var(--text); font-size: 14.5px; display:flex; align-items:center; gap:8px;}
+  .repo-name::before{ content: '⌥'; color: var(--sage); }
+  .repo-desc{ font-size: 13.5px; color: var(--text-dim); margin-top: 8px; }
+  .repo-contrib{ font-size: 12.5px; color: var(--text-faint); margin-top: 10px; font-family: var(--mono); border-top: 1px dashed var(--hairline); padding-top: 10px; }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-row{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .edu-row .t{ font-weight: 600; color: var(--text); }
+  .edu-row .s{ color: var(--text-faint); font-family: var(--mono); font-size: 13px; }
+  .cert-list{ list-style: none; }
+  .cert-list li{ padding: 8px 0; border-bottom: 1px solid var(--hairline); font-size: 14px; color: var(--text-dim); display:flex; gap:10px;}
+  .cert-list li::before{ content:'▸'; color: var(--sage); }
+  .cert-list li:last-child{ border-bottom: none; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ padding: 60px 0 80px; }
+  .footer-terminal{ font-family: var(--mono); font-size: 14px; color: var(--text-dim); }
+  .footer-terminal .sym{ color: var(--sage); }
+  .footer-links{ display: flex; gap: 22px; margin-top: 18px; flex-wrap: wrap; font-family: var(--mono); font-size: 13px; }
+  .footer-note{ margin-top: 40px; font-size: 12px; color: var(--text-faint); font-family: var(--mono); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation: none !important; transition: none !important; }
+    html{ scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-brand">kumar<span>@</span>sidharth</div>
+    <div class="nav-links">
+      <a href="#experience">experience</a>
+      <a href="#stack">stack</a>
+      <a href="#awards">awards</a>
+      <a href="#oss">open-source</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="terminal-title">~/kumar-sidharth — whoami</span>
+      </div>
+      <div class="terminal-body">
+        <div class="prompt-line"><span class="sym">➜</span> whoami</div>
+        <h1 class="name">Kumar Sidharth<span class="cursor"></span></h1>
+        <div class="role-line">Lead Software Engineer, 9 Years — Architecting micro-frontends and AI-driven tooling at enterprise scale</div>
+        <div class="location-line">📍 Bangalore, India</div>
+
+        <div class="stack-line">
+          <span class="stack-kw">const</span> stack <span class="stack-op">=</span> [
+          <div class="stack-chips">
+            <span class="hchip">React.js</span><span class="hchip">TypeScript</span><span class="hchip">Node.js</span><span class="hchip">Next.js</span><span class="hchip">GraphQL</span><span class="hchip">Micro-frontends</span><span class="hchip">MCP</span><span class="hchip">AWS</span>
+          </div>
+          ]<span class="stack-op">;</span>
+        </div>
+
+        <div class="hero-links">
+          <a class="btn primary" href="mailto:k.sidharth1994@gmail.com">Send email</a>
+          <a class="btn" href="tel:+919611485112">+91 96114 85112</a>
+          <a class="btn" href="https://github.com/KumarSidharth/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/kumarsidharth/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn" href="https://leetcode.com/u/KumarSidharth/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+          <a class="btn" href="#experience">View log →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">summary</div>
+    <p class="summary-text">
+      Lead Software Engineer with <strong>9 years of experience</strong> architecting highly scalable web applications and
+      microservices using TypeScript, React.js, and Node.js. Specialized in driving enterprise
+      <strong>micro-frontend architecture</strong> and Backend-for-Frontend (BFF) patterns. Proven track record of slashing
+      performance bottlenecks, enforcing AA accessibility standards, and architecting
+      <strong>AI-driven agentic tooling and MCP-based systems.</strong>
+    </p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow">experience</div>
+    <div class="gitlog">
+
+      <div class="commit">
+        <div class="commit-node current"></div>
+        <div class="commit-head">
+          <span class="commit-role">Optum</span>
+          <span class="commit-tag head">HEAD</span>
+        </div>
+        <div class="commit-meta">Lead Software Engineer (via Publicis Sapient) · Dec 2023 – Present · Bangalore</div>
+        <div class="diff">
+          <div class="diff-line add"><span class="sign">+</span><span>Architected enterprise-scale micro-frontends and shared component libraries in TypeScript/React, enabling scalable UI delivery across <span class="metric">30 distributed teams</span>.</span></div>
+          <div class="diff-line add"><span class="sign">+</span><span>Resolved performance bottlenecks via observability tooling, lifting Lighthouse scores from <span class="metric">72 → 98</span> and enforcing WCAG 2.2 AA compliance.</span></div>
+          <div class="diff-line add"><span class="sign">+</span><span>Re-architected a decision-tree chatbot into an MCP-driven conversational system with dynamic tool-calling, deployed on AWS EC2 — cut support escalations by <span class="metric">80%</span>.</span></div>
+          <div class="diff-line add"><span class="sign">+</span><span>Built an LLM-powered migration tool automating state-management transitions, turning <span class="metric">weeks into 3 days</span> — Won Optum AI Hackathon 2026.</span></div>
+        </div>
+      </div>
+
+      <div class="commit">
+        <div class="commit-node"></div>
+        <div class="commit-head">
+          <span class="commit-role">Reliance Retail (Fynd)</span>
+        </div>
+        <div class="commit-meta">Lead Software Engineer · Dec 2022 – Dec 2023 · Bangalore</div>
+        <div class="diff">
+          <div class="diff-line add"><span class="sign">+</span><span>Engineered a Node.js async webhook server for microservice events, cutting cloud costs by <span class="metric">20%</span>.</span></div>
+          <div class="diff-line add"><span class="sign">+</span><span>Resolved duplicate logic across <span class="metric">50 dependent teams</span> with a POC micro-frontend architecture using BFF patterns, driving org-wide adoption.</span></div>
+          <div class="diff-line add"><span class="sign">+</span><span>Slashed landing page load from <span class="metric">~2000ms → 250ms</span> via SSG and edge delivery, boosting SEO crawlability and retention.</span></div>
+        </div>
+      </div>
+
+      <div class="commit">
+        <div class="commit-node"></div>
+        <div class="commit-head">
+          <span class="commit-role">Joveo</span>
+        </div>
+        <div class="commit-meta">Senior Frontend Developer · May 2021 – Nov 2022 · Hyderabad</div>
+        <div class="diff">
+          <div class="diff-line add"><span class="sign">+</span><span>Accelerated workflow page load from <span class="metric">3s → 0.2s</span> via Next.js SSG, ISR and code splitting — <span class="metric">35%</span> lift in retention.</span></div>
+          <div class="diff-line add"><span class="sign">+</span><span>Migrated CI/CD from Jenkins to GitHub Actions, streamlining deployments across the frontend platform.</span></div>
+          <div class="diff-line add"><span class="sign">+</span><span>Mentored a 5-engineer agile team and led i18n implementation, scaling the product across <span class="metric">26 languages</span>.</span></div>
+        </div>
+      </div>
+
+      <div class="commit">
+        <div class="commit-node"></div>
+        <div class="commit-head">
+          <span class="commit-role">Siemens</span>
+        </div>
+        <div class="commit-meta">Software Developer (via Simeio and Valuesoft Info) · Jun 2017 – May 2021 · Bangalore</div>
+        <div class="diff">
+          <div class="diff-line add"><span class="sign">+</span><span>Built the AI-Rad Companion Brain MR plugin in React.js, translating complex medical requirements into clinician-friendly UI workflows.</span></div>
+          <div class="diff-line add"><span class="sign">+</span><span>Sustained <span class="metric">90%+</span> code coverage through rigorous Jest testing and CI/CD discipline.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <div class="eyebrow">Skills</div>
+    <div class="stack-grid">
+      <div class="stack-cat">
+        <div class="eyebrow" style="color:var(--text-faint)">languages</div>
+        <div class="chip-row">
+          <span class="chip">JavaScript (ES6+)</span><span class="chip">TypeScript</span><span class="chip">HTML5</span><span class="chip">CSS3 / SCSS</span><span class="chip">Shell Script</span>
+        </div>
+      </div>
+      <div class="stack-cat">
+        <div class="eyebrow" style="color:var(--text-faint)">frontend</div>
+        <div class="chip-row">
+          <span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">Redux</span><span class="chip">Zustand</span><span class="chip">Accessibility</span><span class="chip">Storybook</span><span class="chip">Vite</span><span class="chip">React Router</span><span class="chip">Tailwind</span>
+        </div>
+      </div>
+      <div class="stack-cat">
+        <div class="eyebrow" style="color:var(--text-faint)">backend</div>
+        <div class="chip-row">
+          <span class="chip">Node.js</span><span class="chip">GraphQL</span><span class="chip">REST</span><span class="chip">JWT</span><span class="chip">Express.js</span><span class="chip">SQL</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">MCP</span>
+        </div>
+      </div>
+      <div class="stack-cat">
+        <div class="eyebrow" style="color:var(--text-faint)">tools & cloud</div>
+        <div class="chip-row">
+          <span class="chip">Git</span><span class="chip">GitHub Actions</span><span class="chip">Jest</span><span class="chip">Playwright</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">AWS EC2</span><span class="chip">S3</span><span class="chip">CloudFront</span><span class="chip">Route53</span><span class="chip">Cognito</span>
+        </div>
+      </div>
+      <div class="stack-cat" style="grid-column: 1 / -1;">
+        <div class="eyebrow" style="color:var(--text-faint)">methodologies</div>
+        <div class="chip-row">
+          <span class="chip">System Design</span><span class="chip">Microservices</span><span class="chip">Micro-frontends</span><span class="chip">Agile / Scrum</span><span class="chip">Web Security (OWASP)</span><span class="chip">SEO</span><span class="chip">Web Performance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="awards">
+  <div class="wrap">
+    <div class="eyebrow">recognition</div>
+    <h2>Awards</h2>
+    <div class="award-grid">
+      <div class="award"><div class="medal">★</div><div><div class="t">AI Hackathon Winner — Best AI Agent</div><div class="s">Optum, 2026</div></div></div>
+      <div class="award"><div class="medal">★</div><div><div class="t">Design Thinking Award</div><div class="s">Reliance Retail, 2023 — Innovative product design & cost reduction</div></div></div>
+      <div class="award"><div class="medal">★</div><div><div class="t">Code Quality Award</div><div class="s">Siemens, 2021 — Highest department-wide code standards</div></div></div>
+      <div class="award"><div class="medal">★</div><div><div class="t">Spot Award</div><div class="s">Siemens, 2020 — Exceptional project ownership</div></div></div>
+      <div class="award"><div class="medal">★</div><div><div class="t">Star of Simeio</div><div class="s">Simeio, 2019 — Consistent performance</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="oss">
+  <div class="wrap">
+    <div class="eyebrow">open source</div>
+    <h2>Contributions</h2>
+    <div class="repo-grid">
+      <div class="repo">
+        <div class="repo-name">oat-ui</div>
+        <div class="repo-desc">Ultra-lightweight web component library created by Kailash Nadh (CTO, Zerodha).</div>
+        <div class="repo-contrib">Contribution: automatic show/hide error logic</div>
+      </div>
+      <div class="repo">
+        <div class="repo-name">nitrogen-react</div>
+        <div class="repo-desc">React component library inspired by the Nitrogen design system.</div>
+        <div class="repo-contrib">Contribution: updated types in pagination logic</div>
+      </div>
+      <div class="repo">
+        <div class="repo-name">fdk-extension-utils-javascript</div>
+        <div class="repo-desc">Node.js library managing billing flow for the Fynd ecommerce platform.</div>
+        <div class="repo-contrib">Contribution: implemented free-plan management for trial customers</div>
+      </div>
+      <div class="repo">
+        <div class="repo-name">12-column-grid</div>
+        <div class="repo-desc">Highly customizable, ultra-lightweight CSS grid utility library written in SCSS.</div>
+        <div class="repo-contrib">Created and owned by me — used across multiple projects at Siemens</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow">education & certifications</div>
+    <h2>Foundations</h2>
+    <div class="edu-row">
+      <div class="t">B.E., Computer Science and Engineering</div>
+      <div class="s">Bangalore Institute of Technology (VTU) · 2013 – 2017</div>
+    </div>
+    <ul class="cert-list">
+      <li>Enterprise Web Application Performance — Maximiliano Firtman</li>
+      <li>Programming Foundations: Web Security — Kevin Skoglund</li>
+      <li>Creating Accessible Websites</li>
+      <li>Advanced Prompt Engineering Techniques</li>
+      <li>NodeJS — The Complete Guide (MVC, REST APIs, GraphQL, Deno)</li>
+      <li>JavaScript: The Hard Parts — Will Sentance</li>
+    </ul>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="eyebrow">contact</div>
+    <div class="footer-terminal">
+      <div><span class="sym">➜</span> echo $CONTACT</div>
+      <div style="margin-top:8px; color:var(--text);">Open to Lead / Senior Engineer roles — React, Node.js, AI tooling.</div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:k.sidharth1994@gmail.com">k.sidharth1994@gmail.com</a>
+      <a href="tel:+919611485112">+91 96114 85112</a>
+      <a href="https://www.linkedin.com/in/kumarsidharth/">LinkedIn</a>
+      <a href="https://github.com/KumarSidharth/">GitHub</a>
+    </div>
+    <div class="footer-note">// Bangalore, India — built from source, not a template.</div>
+  </div>
+</footer>
+
+</body>
+</html>
